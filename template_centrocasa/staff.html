@@ -39,13 +39,11 @@
 		
 		
 		@media screen and (max-width: 800px) {
-				.staff{
-						width: 110%;
-						border: none;
-				}
-				
-					
-			}
+      .staff{
+          width: 110%;
+          border: none;
+      }			
+    }
 	</style>
  
 </head>
@@ -86,6 +84,7 @@
           <li><a href="novita.html">NOVITÀ</a></li>
           <li><a href="documentazione.html">DOCUMENTAZIONE</a></li>
           <li><a href="contatti.html">CONTATTI</a></li>
+          <li><a href="#" onclick="CambiaTesto()">ITA/TED</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -99,15 +98,20 @@
   <main id="main">
 
     <section style="padding:30px;height:1000px">
-			<h1>Il nostro staff</h1>
+			<h1 id="H1"></h1>
 			<div style="height:45%">
 				<br><img class="staff" src="./img/centrocasa/staff2.jpg">
-				<br><p style="float:left; padding: 10px">Da sinistra: Roberta Tagliavini, Markus Plaikner, <br>Mar’yana Ivashchenko, Mario Usala, Daniele Giacomin</p>
+        <br><p style="float:left; padding: 10px">
+          <h id="h1"></h>
+          <br><h id="h2"></h>
+        </p>
 			</div>
 			<div style="height:55%">
 				<img class="staff" src="./img/centrocasa/staff1.jpg">
-				<p style="float:left; padding: 10px">Da sinistra: Dodo Detassis, Donatella Califano, <br>Renato Zanieri</p>
-				
+        <p style="float:left; padding: 10px">
+          <h id="h3"></h>
+          <br><h id="h4"></h>
+        </p>	
 			</div>
 	</section>
     
@@ -148,3 +152,42 @@
 
 </body>
 </html>
+
+<script>
+  var traduzioni={
+        "ITA":{
+          "H1":"Il nostro staff",
+          "h1":"Da sinistra: Roberta Tagliavini, Markus Plaikner, ",
+          "h2":"Mar’yana Ivashchenko, Mario Usala, Daniele Giacomin",
+          "h3":"Da sinistra: Dodo Detassis, Donatella Califano, ",
+          "h4":"Renato Zanieri",
+        },
+        "TED":{
+          "H1":"",
+          "h1":"",
+          "h2":"",
+          "h3":"",
+          "h4":"",
+        }
+      };
+      document.getElementById("H1").innerText=traduzioni.ITA.H1;
+      document.getElementById("h1").innerText=traduzioni.ITA.h1;
+      document.getElementById("h2").innerText=traduzioni.ITA.h2;
+      document.getElementById("h3").innerText=traduzioni.ITA.h3;
+      document.getElementById("h4").innerText=traduzioni.ITA.h4;
+    function CambiaTesto(){
+        if(document.getElementById("H1").innerText==traduzioni.ITA.H1){
+          document.getElementById("H1").innerText=traduzioni.TED.H1;
+          document.getElementById("h1").innerText=traduzioni.TED.h1;
+          document.getElementById("h2").innerText=traduzioni.TED.h2;
+          document.getElementById("h3").innerText=traduzioni.TED.h3;
+          document.getElementById("h4").innerText=traduzioni.TED.h4;
+        }else{
+          document.getElementById("H1").innerText=traduzioni.ITA.H1;
+          document.getElementById("h1").innerText=traduzioni.ITA.h1;
+          document.getElementById("h2").innerText=traduzioni.ITA.h2;
+          document.getElementById("h3").innerText=traduzioni.ITA.h3;
+          document.getElementById("h4").innerText=traduzioni.ITA.h4;
+        }
+    }
+</script>
