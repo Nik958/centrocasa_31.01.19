@@ -68,6 +68,7 @@
           <li><a href="novita.html">NOVITÀ</a></li>
           <li><a href="documentazione.html">DOCUMENTAZIONE</a></li>
           <li><a href="contatti.html">CONTATTI</a></li>
+          <li><a href="#" onclick="CambiaTesto()">ITA/TED</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -81,14 +82,10 @@
   <main id="main">
 
     <section style="padding:30px">
-		<h1>Chi siamo</h1>
-		<p>Il Centro Casa - Südtiroler Mieterschutz è una associazione attiva dal 1979 per offrire ai propri associati assistenza, consulenza, tutela agli inquilini di alloggi privati e pubblici e la difesa e l'affermazione del diritto alla casa e all'abitare.
-			<br>E‘ il sindacato degli inquilini, promosso da CGIL-AGB, SGBCISL e UIL-SGK, ed è oggi l’unica struttura a gestione unitaria ancora presente in Italia. Il Centro Casa Mieterschutz pone la sua competenza al servizio degli inquilini (ma anche dei proprietari interessati a un corretto rapporto di locazione), fornendo consulenza e assistenza.
-			<br>Il Centro Casa Mieterschutz segue il rapporto tra proprietario e inquilino dalla prima consulenza, alla stipula del contratto, fino al rilascio dell'alloggio passando per i rinnovi, le proroghe, la ripartizione delle spese condominiali, la disdetta, lo sfratto, offre inoltre informazioni sulle normative nazionali e provinciali in materia abitativa e molto altro.
-			<br>Di particolare interesse, e spesso difficile, è anche il rapporto tra gli inquilini e l'IPES. A questo settore è dedicato uno spazio a sé. 
-		</p>
-		<p><br>L’associazione è presente, oltre che nella sede principale di Bolzano, anche a Bressanone, Brunico, Merano e Laives</p>
-		<p></p><br>E’ possibile associarsi al Centro Casa Mieterschutz presso ogni sede.</p>
+		<h1 id="h1"></h1>
+		<p id="p1"></p>
+		<p id="p2"><br></p>
+		<p id="p3"><br></p>
     </section>
   
   </main>
@@ -128,3 +125,40 @@
 
 </body>
 </html>
+
+<script>
+  var traduzioni={
+
+        "ITA":{
+          "h1":"Chi siamo",
+          "p1":"Il Centro Casa - Südtiroler Mieterschutz è una associazione attiva dal 1979 per offrire ai propri associati assistenza, consulenza, tutela agli inquilini di alloggi privati e pubblici e la difesa e l'affermazione del diritto alla casa e all'abitare.\n E‘ il sindacato degli inquilini, promosso da CGIL-AGB, SGBCISL e UIL-SGK, ed è oggi l’unica struttura a gestione unitaria ancora presente in Italia. Il Centro Casa Mieterschutz pone la sua competenza al servizio degli inquilini (ma anche dei proprietari interessati a un corretto rapporto di locazione), fornendo consulenza e assistenza. \n Il Centro Casa Mieterschutz segue il rapporto tra proprietario e inquilino dalla prima consulenza, alla stipula del contratto, fino al rilascio dell'alloggio passando per i rinnovi, le proroghe, la ripartizione delle spese condominiali, la disdetta, lo sfratto, offre inoltre informazioni sulle normative nazionali e provinciali in materia abitativa e molto altro.\n Di particolare interesse, e spesso difficile, è anche il rapporto tra gli inquilini e l'IPES. A questo settore è dedicato uno spazio a sé. ",
+          "p2":"L’associazione è presente, oltre che nella sede principale di Bolzano, anche a Bressanone, Brunico, Merano e Laives.",
+          "p3":"E’ possibile associarsi al Centro Casa Mieterschutz presso ogni sede.",
+        },
+
+        "TED":{
+          "h1":"Wer wir sind",
+          "p1":"Das Mieterschutz South Tyrolean Home Center bietet seinen Mitgliedern seit 1979 Unterstützung, Beratung, Schutz für Mieter von privatem und öffentlichem Wohnraum und Verteidigung sowie die Bekräftigung des Rechts auf Wohnen und Wohnen ‚das. Mieterkonsortium aufgrund der von CGIL geförderten Konditionen, SGBCISL und UIL-SGK, und ist heute die einzige einheitliche Führungsstruktur in Italien. Das Mieterschutz Home Center stellt seine Kompetenz in den Dienst der Mieter (aber auch der Eigentümer, die an einem korrekten Mietverhältnis interessiert sind), indem sie Beratung und Unterstützung bietet. Das Mieterschutz Home Center Das Verhältnis zwischen Eigentümer und Mieter ergibt sich von der ersten Konsultation über die Festlegung des Vertrages bis zur Freigabe der Unterkunft durch die Verlängerungen, die Erweiterungen, die Aufteilung der Eigentumswohnungen, die Stornierung, die Räumung, die Sie erhalten ZUSÄTZLICHE Informationen zu den nationalen und provinziellen Bestimmungen für Wohnraum und vieles mehr. Von besonderem Interesse und oft schwierig, und auch die Beziehung zwischen Mietern und IPES. Ein Sektor und ein Raum für sich.",
+          "p2":"Der Verein ist in Bozen sowie in Brixen, Bruneck, Meran und Leifers vertreten.",
+          "p3":"Sie können an jedem Standort dem Mieterschutz Home Center beitreten."
+        }
+        
+      };
+    document.getElementById("h1").innerText=traduzioni.ITA.h1; 
+    document.getElementById("p1").innerText=traduzioni.ITA.p1; 
+    document.getElementById("p2").innerText=traduzioni.ITA.p2;
+    document.getElementById("p3").innerText=traduzioni.ITA.p3; 
+    function CambiaTesto(){
+        if(document.getElementById("h1").innerText==traduzioni.ITA.h1){
+          document.getElementById("h1").innerText=traduzioni.TED.h1;
+          document.getElementById("p1").innerText=traduzioni.TED.p1; 
+          document.getElementById("p2").innerText=traduzioni.TED.p2;
+          document.getElementById("p3").innerText=traduzioni.TED.p3; 
+        }else{
+          document.getElementById("h1").innerText=traduzioni.ITA.h1;
+          document.getElementById("p1").innerText=traduzioni.ITA.p1; 
+          document.getElementById("p2").innerText=traduzioni.ITA.p2;
+          document.getElementById("p3").innerText=traduzioni.ITA.p3; 
+        }
+    }
+</script>
