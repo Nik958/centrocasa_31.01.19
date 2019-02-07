@@ -1,10 +1,10 @@
-<!-- Codice per accettazione cookie - Inizio -->
+
 //<![CDATA[
 (function(window) {
   if (!!window.cookieChoices) {
     return window.cookieChoices;
   }
-  var document = window.document; 
+  var document = window.document;
   var supportsTextContent = 'textContent' in document.body;
   var cookieChoices = (function() {
     var cookieName = 'displayCookieConsent';
@@ -132,5 +132,3 @@ document.addEventListener('DOMContentLoaded', function(event) {
         'OK', '+Info', 'http://www.ilmiosito.com/p/politica-dei-cookie.html');
   });
 //]]>
-</script>
-<!-- Codice per accettazione cookie - Fine -->
