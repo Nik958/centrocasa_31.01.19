@@ -29,7 +29,7 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
- 
+
 </head>
 
 <body id="body">
@@ -42,9 +42,9 @@
   <!--==========================
     Header
   ============================-->
-  
-  
-  
+
+
+
   <header id="header">
     <div class="container">
 
@@ -77,7 +77,7 @@
   <!--==========================
     Intro Section
   ============================-->
- 
+
 
   <main id="main">
 		<section style="padding:30px">
@@ -86,7 +86,7 @@
 			<p id="p1"></p>
 			<p id="p2"></p>
 		</section>
-    
+
   </main>
 
   <!--==========================
@@ -95,7 +95,13 @@
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Reveal</strong>. All Rights Reserved
+        <script>
+          var today = new Date();
+          var year = today.getFullYear();
+          var el = document.getElementById('footer');
+          el.innerHTML = '<p>Copyright <strong>Reveal</strong> ' + year + ' All Rights Reserved</p>'
+        </script>
+
       </div>
     </div>
   </footer><!-- #footer -->
@@ -139,11 +145,11 @@
             "p2":"Um die vielen Rechtsstreitigkeiten rund um den Über- bzw. Rückgabezustand der Wohnung zu vermeiden ist ein entsprechender Protokollvordruck ausgearbeitet worden, der beim Abschluss des Mietvertrags vom Mieter und vom Vermieter ausgefüllt und unterschrieben wird. Ein weiterer wichtiger Punkt ist, dass die Übereinstimmung der wirtschaftlichen und vertraglichen Konditionen und Bestimmungen des Mietvertrags mit den Vorgaben der Gebietsabkommen bescheinigt wird. Diese Bescheinigung ist notwendig, um in den Genuss der Steuerbegünstigungen zu kommen und kann ausschließlich von einer unterzeichnenden Organisation ausgestellt werden (in Südtirol der Centro Casa Mieterschutz und der Verband der Hauseigentümer). Die Bescheinigung wird aufgrund der Erklärung der Vertragspartner abgefasst, sie übernehmen die Verantwortung für die Richtigkeit der Daten. Die Überprüfung der unterzeichnenden Organisationen hat eine Art Schutzfunktion für Mieter gegenüber einseitigen Interpretationen oder der Cleverness mancher Eigentümer."
           }
       };
-    
+
     document.getElementById("h1").innerText=traduzioni.ITA.h1;
     document.getElementById("b1").innerText=traduzioni.ITA.b1;
     document.getElementById("p1").innerText=traduzioni.ITA.p1;
-    document.getElementById("p2").innerText=traduzioni.ITA.p2; 
+    document.getElementById("p2").innerText=traduzioni.ITA.p2;
     function CambiaTesto(){
         if(document.getElementById("h1").innerText==traduzioni.ITA.h1){
           document.getElementById("h1").innerText=traduzioni.TED.h1;

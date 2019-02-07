@@ -31,21 +31,21 @@
 
 	<style>
 		.staff{
-			 width:60%; 
-			 border-right: 2px solid grey; 
+			 width:60%;
+			 border-right: 2px solid grey;
 			 padding:30px;
 			 float: left;
 		}
-		
-		
+
+
 		@media screen and (max-width: 800px) {
       .staff{
           width: 110%;
           border: none;
-      }			
+      }
     }
 	</style>
- 
+
 </head>
 
 <body id="body">
@@ -58,9 +58,9 @@
   <!--==========================
     Header
   ============================-->
-  
-  
-  
+
+
+
   <header id="header">
     <div class="container">
 
@@ -93,7 +93,7 @@
   <!--==========================
     Intro Section
   ============================-->
- 
+
 
   <main id="main">
 
@@ -111,12 +111,12 @@
         <p style="float:left; padding: 10px">
           <h id="h3"></h>
           <br><h id="h4"></h>
-        </p>	
+        </p>
 			</div>
 	</section>
-    
+
   </main>
-    
+
   </main>
 
   <!--==========================
@@ -125,7 +125,13 @@
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Reveal</strong>. All Rights Reserved
+        <script>
+          var today = new Date();
+          var year = today.getFullYear();
+          var el = document.getElementById('footer');
+          el.innerHTML = '<p>Copyright <strong>Reveal</strong> ' + year + ' All Rights Reserved</p>'
+        </script>
+
       </div>
     </div>
   </footer><!-- #footer -->

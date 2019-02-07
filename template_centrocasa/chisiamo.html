@@ -29,7 +29,7 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
- 
+
 </head>
 
 <body id="body">
@@ -42,9 +42,9 @@
   <!--==========================
     Header
   ============================-->
-  
-  
-  
+
+
+
   <header id="header">
     <div class="container">
 
@@ -77,7 +77,7 @@
   <!--==========================
     Intro Section
   ============================-->
- 
+
 
   <main id="main">
 
@@ -87,18 +87,24 @@
 		<p id="p2"><br></p>
 		<p id="p3"><br></p>
     </section>
-  
+
   </main>
 
   <!--==========================
     Footer
   ============================-->
-  
+
 
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Reveal</strong>. All Rights Reserved
+        <script>
+          var today = new Date();
+          var year = today.getFullYear();
+          var el = document.getElementById('footer');
+          el.innerHTML = '<p>Copyright <strong>Reveal</strong> ' + year + ' All Rights Reserved</p>'
+        </script>
+
       </div>
     </div>
   </footer><!-- #footer -->
@@ -142,23 +148,23 @@
           "p2":"Der Verein ist in Bozen sowie in Brixen, Bruneck, Meran und Leifers vertreten.",
           "p3":"Sie können an jedem Standort dem Mieterschutz Home Center beitreten."
         }
-        
+
       };
-    document.getElementById("h1").innerText=traduzioni.ITA.h1; 
-    document.getElementById("p1").innerText=traduzioni.ITA.p1; 
+    document.getElementById("h1").innerText=traduzioni.ITA.h1;
+    document.getElementById("p1").innerText=traduzioni.ITA.p1;
     document.getElementById("p2").innerText=traduzioni.ITA.p2;
-    document.getElementById("p3").innerText=traduzioni.ITA.p3; 
+    document.getElementById("p3").innerText=traduzioni.ITA.p3;
     function CambiaTesto(){
         if(document.getElementById("h1").innerText==traduzioni.ITA.h1){
           document.getElementById("h1").innerText=traduzioni.TED.h1;
-          document.getElementById("p1").innerText=traduzioni.TED.p1; 
+          document.getElementById("p1").innerText=traduzioni.TED.p1;
           document.getElementById("p2").innerText=traduzioni.TED.p2;
-          document.getElementById("p3").innerText=traduzioni.TED.p3; 
+          document.getElementById("p3").innerText=traduzioni.TED.p3;
         }else{
           document.getElementById("h1").innerText=traduzioni.ITA.h1;
-          document.getElementById("p1").innerText=traduzioni.ITA.p1; 
+          document.getElementById("p1").innerText=traduzioni.ITA.p1;
           document.getElementById("p2").innerText=traduzioni.ITA.p2;
-          document.getElementById("p3").innerText=traduzioni.ITA.p3; 
+          document.getElementById("p3").innerText=traduzioni.ITA.p3;
         }
     }
 </script>
