@@ -29,7 +29,7 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
- 
+
 </head>
 
 <body id="body">
@@ -42,9 +42,9 @@
   <!--==========================
     Header
   ============================-->
-  
-  
-  
+
+
+
   <header id="header">
     <div class="container">
 
@@ -76,10 +76,10 @@
   <!--==========================
     Intro Section
   ============================-->
-  
-  
 
- 
+
+
+
 
   <section id="intro">
 
@@ -93,13 +93,13 @@
 
   <main id="main">
 
-    
+
   </main>
 
   <!--==========================
     Footer
   ============================-->
-  
+
   <br>
   <footer id="footer">
     <div class="container">
