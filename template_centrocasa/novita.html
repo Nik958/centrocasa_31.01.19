@@ -120,10 +120,16 @@
   <!--==========================
     Footer
   ============================-->
-  <footer id="footer">
+  <footer id="footer" style="padding: 10px">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Reveal</strong>. All Rights Reserved
+        <script>
+          var today = new Date();
+          var year = today.getFullYear();
+          var el = document.getElementById('footer');
+          el.innerHTML = '<p>Copyright <strong>Reveal</strong> ' + year + ' All Rights Reserved</p>'
+        </script>
+
       </div>
     </div>
   </footer><!-- #footer -->
