@@ -34,7 +34,7 @@
 </head>
 
 <body id="body" onload="ITA()">
-
+<script src="cookies.js"> </script>
   <!--==========================
     Top Bar
   ============================-->
@@ -116,13 +116,7 @@
     </div>
     <hr>
 
-
-  </section><!-- #intro -->
-
-  <main id="main">
-    <br>
-    <br>
-    <div class="owl-carousel" >
+    <div class="l_div owl-carousel">
     <h4>I NOSTRI SERVIZI</p><br>
     <ul>
       <li>Stipula Del Contratto</li>
@@ -137,6 +131,17 @@
     </ul>
       <a href="servizi.html">Per Saperne Di Pi&ugrave;</a>
     </div>
+    <div class="r_div owl-carousel">
+      <h4>NOVITÀ</p><br>
+    <p style="font-size:15px ">Dal 1 gennaio è entrato in vigore il nuovo accordo territoriale per il comune di Bolzano. <br> Sono stati rivisti i parametri  per la determinazione dei canoni e per alcune tipologie di alloggi,<br> soprattutto se di minor pregio e nelle zone popolari, <br> il Centro Casa stima una riduzione degli affitti. <br> Tra le novità l’introduzione dell’attestazione di rispondenza del contratto di locazione agli accordi.</p>
+      <a href="novita.html">Per Saperne Di Pi&ugrave;</a>
+    </div>
+
+
+  </section><!-- #intro -->
+
+  <main id="main">
+
 
 
   </main>
@@ -146,10 +151,10 @@
   ============================-->
 
   <br>
-  <footer id="footer">
+  <footer id="footer" style="margin-bottom: 0px">
 
-    <div class="container">
-      <div class="copyright">
+    <div class="container"  style="margin-bottom: 0px">
+      <div class="copyright"  style="margin-bottom: 0px">
         <script>
           var today = new Date();
           var year = today.getFullYear();
@@ -194,7 +199,6 @@
           "DOVE_SIAMO":"DOVE SIAMO",
           "NOVITÀ":"NOVITÀ",
           "DOCUMENTAZIONE":"DOCUMENTAZIONE",
-          "CONTATTI":"CONTATTI",
           "LINGUA":"Lingua",
         },
         "TED":{
@@ -205,7 +209,6 @@
           "DOVE_SIAMO":"DOVE SIAMO",
           "NOVITÀ":"NOVITÀ",
           "DOCUMENTAZIONE":"DOCUMENTAZIONE",
-          "CONTATTI":"CONTATTI",
           "LINGUA":"Sprache",
         },
         "ENG":{
@@ -216,7 +219,6 @@
             "DOVE_SIAMO":"WHERE YOU CAN FIND US",
             "NOVITÀ":"NEWS",
             "DOCUMENTAZIONE":"DOCUMENTATION",
-            "CONTATTI":"CONTACTS",
             "LINGUA":"Language",
         }
       };
@@ -229,7 +231,6 @@
       document.getElementById("DOVE_SIAMO").innerText=traduzioni.ITA.DOVE_SIAMO;
       document.getElementById("NOVITÀ").innerText=traduzioni.ITA.NOVITÀ;
       document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.ITA.DOCUMENTAZIONE;
-      document.getElementById("CONTATTI").innerText=traduzioni.ITA.CONTATTI;
       document.getElementById("LINGUA").innerText=traduzioni.ITA.LINGUA;
       localStorage.setItem("LANG","ITA");
     }
@@ -239,8 +240,8 @@
       document.getElementById("STAFF").innerText=traduzioni.TED.STAFF;
       document.getElementById("I_NOSTRI_SERVIZI").innerText=traduzioni.TED.I_NOSTRI_SERVIZI;
       document.getElementById("DOVE_SIAMO").innerText=traduzioni.TED.DOVE_SIAMO;
+      document.getElementById("NOVITÀ").innerText=traduzioni.TED.NOVITÀ;
       document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.TED.DOCUMENTAZIONE;
-      document.getElementById("CONTATTI").innerText=traduzioni.TED.CONTATTI;
       document.getElementById("LINGUA").innerText=traduzioni.TED.LINGUA;
       localStorage.setItem("LANG","TED");
     }
@@ -250,8 +251,8 @@
       document.getElementById("STAFF").innerText=traduzioni.ENG.STAFF;
       document.getElementById("I_NOSTRI_SERVIZI").innerText=traduzioni.ENG.I_NOSTRI_SERVIZI;
       document.getElementById("DOVE_SIAMO").innerText=traduzioni.ENG.DOVE_SIAMO;
+      document.getElementById("NOVITÀ").innerText=traduzioni.ENG.NOVITÀ;
       document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.ENG.DOCUMENTAZIONE;
-      document.getElementById("CONTATTI").innerText=traduzioni.ENG.CONTATTI;
       document.getElementById("LINGUA").innerText=traduzioni.ENG.LINGUA;
       localStorage.setItem("LANG","ENG");
     }

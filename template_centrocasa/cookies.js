@@ -128,7 +128,7 @@
   return cookieChoices;
 })(this);
 document.addEventListener('DOMContentLoaded', function(event) {
-    cookieChoices.showCookieConsentBar('Questo sito utilizza i cookie per migliorare servizi ed esperienza dei lettori. Se decidi di continuare la navigazione consideriamo che accetti il loro uso.',
+cookieChoices.showCookieConsentBar('Questo sito utilizza i cookie per migliorare servizi ed esperienza dei lettori. Se decidi di continuare la navigazione consideriamo che accetti il loro uso.',
         'OK', '+Info', 'http://www.ilmiosito.com/p/politica-dei-cookie.html');
   });
 //]]>
