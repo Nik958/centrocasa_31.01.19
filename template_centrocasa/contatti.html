@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- <script type = "text/javascript" src="contatti.js"></script> -->
 <link rel="stylesheet" type="text/css" href="prova.css">
   <meta charset="utf-8">
   <title>CENTROCASA</title>
@@ -29,10 +30,10 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
-
+ 
 </head>
 
-<body id="body">
+<body id="body" onload="ITA()">
 
   <!--==========================
     Top Bar
@@ -42,32 +43,58 @@
   <!--==========================
     Header
   ============================-->
-
-
-
+  
+  
+  
   <header id="header">
-    <div class="container">
+    <div class="container-fluid">
 
       <div id="logo" class="pull-left">
       <!-- Image and text -->
-		<nav class="">
-  		<a class="navbar-brand" href="home.html">
-    		<img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-  			CENTROCASA
-  		</a>
-</nav>
+      <nav class="">
+          <ul class="nav-menu">
+            <li>
+              <a class="navbar-brand" href="home.html" style="            
+                padding-top: 0.3125rem;
+                padding-bottom: 0.3125rem;
+                font-family : inherit;
+                font-style : normal;
+                font-weight : normal;
+                font-size:  1.24rem;
+                color: #50d8af;
+              ">
+                <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                CENTROCASA
+              </a>
+            </li>
+            <li>
+              <a href="#" id="LINGUA" data-toggle="dropdown" style="text-decoration: none;"> </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#" onclick="ITA()">ITA</a>
+                </li>
+                <li>
+                  <a href="#" onclick="TED()">TED</a>
+                </li>
+                <li>
+                  <a href="#" onclick="ENG()">ENG</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li><a href="home.html">HOME</a></li>
-          <li><a href="chisiamo.html">CHI SIAMO</a></li>
-          <li><a href="staff.html">STAFF</a></li>
-          <li><a href="servizi.html">I NOSTRI SERVIZI</a></li>
-          <li><a href="dovesiamo.html">DOVE SIAMO</a></li>
-          <li><a href="novita.html">NOVITÀ</a></li>
-          <li><a href="documentazione.html">DOCUMENTAZIONE</a></li>
-          <li class="menu-active"><a href="contatti.html">CONTATTI</a></li>
+          <li><a href="home.html" id="HOME"></a></li>
+          <li><a href="chisiamo.html" id="CHI_SIAMO"></a></li>
+          <li><a href="staff.html" id="STAFF"></a></li>
+          <li><a href="servizi.html" id="I_NOSTRI_SERVIZI"></a></li>
+          <li><a href="dovesiamo.html" id="DOVE_SIAMO"></a></li>
+          <li><a href="novita.html" id="NOVITÀ"></a></li>
+          <li><a href="documentazione.html" id="DOCUMENTAZIONE"></a></li>
+          <li class="menu-active"><a href="contatti.html" id="CONTATTI"></a></li>         
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -122,3 +149,75 @@
 
 </body>
 </html>
+<script>
+  var traduzioni={
+        "ITA":{
+          "HOME":"HOME",
+          "CHI_SIAMO":"CHI SIAMO",
+          "STAFF":"STAFF",
+          "I_NOSTRI_SERVIZI":"I NOSTRI SERVIZI",
+          "DOVE_SIAMO":"DOVE SIAMO",
+          "NOVITÀ":"NOVITÀ",
+          "DOCUMENTAZIONE":"DOCUMENTAZIONE",
+          "CONTATTI":"CONTATTI",
+          "LINGUA":"Lingua",
+        },
+        "TED":{
+          "HOME":"HOME",
+          "CHI_SIAMO":"CHI SIAMO",
+          "STAFF":"STAFF",
+          "I_NOSTRI_SERVIZI":"I NOSTRI SERVIZI",
+          "DOVE_SIAMO":"DOVE SIAMO",
+          "NOVITÀ":"NOVITÀ",
+          "DOCUMENTAZIONE":"DOCUMENTAZIONE",
+          "CONTATTI":"CONTATTI",
+          "LINGUA":"Sprache",
+        },
+        "ENG":{
+            "HOME":"HOME",
+            "CHI_SIAMO":"WHO WE ARE",
+            "STAFF":"STAFF",
+            "I_NOSTRI_SERVIZI":"OUR SERVICES",
+            "DOVE_SIAMO":"WHERE YOU CAN FIND US",
+            "NOVITÀ":"NEWS",
+            "DOCUMENTAZIONE":"DOCUMENTATION",
+            "CONTATTI":"CONTACTS",
+            "LINGUA":"Language",
+        }
+      };
+
+    function ITA(){
+      document.getElementById("HOME").innerText=traduzioni.ITA.HOME;
+      document.getElementById("CHI_SIAMO").innerText=traduzioni.ITA.CHI_SIAMO;
+      document.getElementById("STAFF").innerText=traduzioni.ITA.STAFF;
+      document.getElementById("I_NOSTRI_SERVIZI").innerText=traduzioni.ITA.I_NOSTRI_SERVIZI;
+      document.getElementById("DOVE_SIAMO").innerText=traduzioni.ITA.DOVE_SIAMO;
+      document.getElementById("NOVITÀ").innerText=traduzioni.ITA.NOVITÀ;
+      document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.ITA.DOCUMENTAZIONE;
+      document.getElementById("CONTATTI").innerText=traduzioni.ITA.CONTATTI;
+      document.getElementById("LINGUA").innerText=traduzioni.ITA.LINGUA;
+    }
+    function TED(){
+      document.getElementById("HOME").innerText=traduzioni.TED.HOME;
+      document.getElementById("CHI_SIAMO").innerText=traduzioni.TED.CHI_SIAMO;
+      document.getElementById("STAFF").innerText=traduzioni.TED.STAFF;
+      document.getElementById("I_NOSTRI_SERVIZI").innerText=traduzioni.TED.I_NOSTRI_SERVIZI;
+      document.getElementById("DOVE_SIAMO").innerText=traduzioni.TED.DOVE_SIAMO;
+      document.getElementById("NOVITÀ").innerText=traduzioni.TED.NOVITÀ;
+      document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.TED.DOCUMENTAZIONE;
+      document.getElementById("CONTATTI").innerText=traduzioni.TED.CONTATTI;
+      document.getElementById("LINGUA").innerText=traduzioni.TED.LINGUA;
+    }
+    function ENG(){
+      document.getElementById("HOME").innerText=traduzioni.ENG.HOME;
+      document.getElementById("CHI_SIAMO").innerText=traduzioni.ENG.CHI_SIAMO;
+      document.getElementById("STAFF").innerText=traduzioni.ENG.STAFF;
+      document.getElementById("I_NOSTRI_SERVIZI").innerText=traduzioni.ENG.I_NOSTRI_SERVIZI;
+      document.getElementById("DOVE_SIAMO").innerText=traduzioni.ENG.DOVE_SIAMO;
+      document.getElementById("NOVITÀ").innerText=traduzioni.ENG.NOVITÀ;
+      document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.ENG.DOCUMENTAZIONE;
+      document.getElementById("CONTATTI").innerText=traduzioni.ENG.CONTATTI;
+      document.getElementById("LINGUA").innerText=traduzioni.ENG.LINGUA;
+    }
+
+</script>
