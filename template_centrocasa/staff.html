@@ -49,7 +49,7 @@
  
 </head>
 
-<body id="body" onload="ITA()">
+<body id="body" onload="Lingua()">
 
   <!--==========================
     Top Bar
@@ -250,6 +250,7 @@
         document.getElementById("h2").innerText=traduzioni.TED.h2;
         document.getElementById("h3").innerText=traduzioni.TED.h3;
         document.getElementById("h4").innerText=traduzioni.TED.h4;
+        localStorage.setItem("LANG","TED");
     }
     function ENG(){
         document.getElementById("HOME").innerText=traduzioni.ENG.HOME;
@@ -266,6 +267,7 @@
         document.getElementById("h2").innerText=traduzioni.ENG.h2;
         document.getElementById("h3").innerText=traduzioni.ENG.h3;
         document.getElementById("h4").innerText=traduzioni.ENG.h4;
+        localStorage.setItem("LANG","ENG");
     }
     function ITA(){
       document.getElementById("HOME").innerText=traduzioni.ITA.HOME;
@@ -282,5 +284,20 @@
         document.getElementById("h2").innerText=traduzioni.ITA.h2;
         document.getElementById("h3").innerText=traduzioni.ITA.h3;
         document.getElementById("h4").innerText=traduzioni.ITA.h4;
+        localStorage.setItem("LANG","ITA");
+    }
+
+    function Lingua(){
+      var lingua=localStorage.getItem("LANG");
+      switch (lingua) {
+        case "ITA": ITA();
+          break;
+        case "TED":TED();
+          break;
+        case "ENG": ENG();
+          break;
+        default: ITA();
+          break;
+      }
     }
 </script>
