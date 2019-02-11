@@ -32,7 +32,7 @@
 
 </head>
 
-<body id="body" onload="ITA()">
+<body id="body" onload="Lingua()">
 
   <!--==========================
     Top Bar
@@ -224,6 +224,7 @@ document.getElementById("h1").innerText=traduzioni.TED.h1;
 document.getElementById("p1").innerText=traduzioni.TED.p1; 
 document.getElementById("p2").innerText=traduzioni.TED.p2;
 document.getElementById("p3").innerText=traduzioni.TED.p3;
+localStorage.setItem("LANG","TED");
 }
 function ITA(){
 document.getElementById("HOME").innerText=traduzioni.ITA.HOME;
@@ -239,6 +240,7 @@ document.getElementById("h1").innerText=traduzioni.ITA.h1;
 document.getElementById("p1").innerText=traduzioni.ITA.p1; 
 document.getElementById("p2").innerText=traduzioni.ITA.p2;
 document.getElementById("p3").innerText=traduzioni.ITA.p3;
+localStorage.setItem("LANG","ITA");
 }
 function ENG(){
 document.getElementById("HOME").innerText=traduzioni.ENG.HOME;
@@ -254,6 +256,21 @@ document.getElementById("h1").innerText=traduzioni.ENG.h1;
 document.getElementById("p1").innerText=traduzioni.ENG.p1; 
 document.getElementById("p2").innerText=traduzioni.ENG.p2;
 document.getElementById("p3").innerText=traduzioni.ENG.p3;
+localStorage.setItem("LANG","ENG");
+}
+
+function Lingua(){
+  var lingua=localStorage.getItem("LANG");
+  switch (lingua) {
+    case "ITA": ITA();
+      break;
+    case "TED":TED();
+      break;
+    case "ENG": ENG();
+      break;
+    default: ITA();
+      break;
+  }
 }
 
 </script>
