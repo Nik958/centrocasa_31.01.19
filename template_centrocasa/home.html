@@ -229,6 +229,7 @@
       document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.ITA.DOCUMENTAZIONE;
       document.getElementById("CONTATTI").innerText=traduzioni.ITA.CONTATTI;
       document.getElementById("LINGUA").innerText=traduzioni.ITA.LINGUA;
+      localStorage.setItem("LANG","ITA");
     }
     function TED(){
       document.getElementById("HOME").innerText=traduzioni.TED.HOME;
@@ -239,6 +240,7 @@
       document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.TED.DOCUMENTAZIONE;
       document.getElementById("CONTATTI").innerText=traduzioni.TED.CONTATTI;
       document.getElementById("LINGUA").innerText=traduzioni.TED.LINGUA;
+      localStorage.setItem("LANG","TED");
     }
     function ENG(){
       document.getElementById("HOME").innerText=traduzioni.ENG.HOME;
@@ -249,6 +251,21 @@
       document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.ENG.DOCUMENTAZIONE;
       document.getElementById("CONTATTI").innerText=traduzioni.ENG.CONTATTI;
       document.getElementById("LINGUA").innerText=traduzioni.ENG.LINGUA;
+      localStorage.setItem("LANG","ENG");
+    }
+
+    function Lingua(){
+      var lingua=localStorage.getItem("LANG");
+      switch (lingua) {
+        case "ITA": ITA();
+          break;
+        case "TED":TED();
+          break;
+        case "ENG": ENG();
+          break;
+        default: ITA();
+          break;
+      }
     }
 
 </script>
