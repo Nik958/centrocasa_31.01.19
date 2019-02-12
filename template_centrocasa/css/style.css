@@ -8,27 +8,6 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-.r_div{
-  float: right;
-  margin-right: 50px;
-  width: auto;
-
-}
-
-.l_div{
-
-  float: left;
-  margin-left: 20px;
-  width:auto;
-
-}
-
-
-
-li{
-  font-size: 15px
-}
-
 
 body {
   background: #fff;
@@ -182,7 +161,7 @@ h6 {
 
 #intro {
   width: 100%;
-  height: 130vh;
+  height: 70vh;
   position: relative;
   background: url("..ingresso.jpg") no-repeat;
   background-size: cover;

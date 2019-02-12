@@ -11,7 +11,7 @@ html, body, {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: auto;
-  height: 60vh;
+  height: 65vh;
   position: relative;
+  max-width: 100%
 }
