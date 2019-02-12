@@ -32,21 +32,21 @@
 
 	<style>
 		.staff{
-			 width:60%;
-			 border-right: 2px solid grey;
+			 width:60%; 
+			 border-right: 2px solid grey; 
 			 padding:30px;
 			 float: left;
 		}
-
-
+		
+		
 		@media screen and (max-width: 800px) {
       .staff{
           width: 110%;
           border: none;
-      }
+      }			
     }
 	</style>
-
+ 
 </head>
 
 <body id="body" onload="Lingua()">
@@ -59,9 +59,9 @@
   <!--==========================
     Header
   ============================-->
-
-
-
+  
+  
+  
   <header id="header">
     <div class="container-fluid">
 
@@ -70,7 +70,7 @@
       <nav class="">
           <ul class="nav-menu">
             <li>
-              <a class="navbar-brand" href="home.html" style="
+              <a class="navbar-brand" href="home.html" style="            
                 padding-top: 0.3125rem;
                 padding-bottom: 0.3125rem;
                 font-family : inherit;
@@ -109,6 +109,7 @@
           <li><a href="dovesiamo.html" id="DOVE_SIAMO"></a></li>
           <li><a href="novita.html" id="NOVITÀ"></a></li>
           <li><a href="documentazione.html" id="DOCUMENTAZIONE"></a></li>
+          <li><a href="contatti.html" id="CONTATTI"></a></li>         
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -192,6 +193,7 @@
           "DOVE_SIAMO":"DOVE SIAMO",
           "NOVITÀ":"NOVITÀ",
           "DOCUMENTAZIONE":"DOCUMENTAZIONE",
+          "CONTATTI":"CONTATTI",
           "LINGUA":"Lingua",
           "H1":"Il nostro staff",
           "h1":"Da sinistra: Roberta Tagliavini, Markus Plaikner, ",
@@ -207,6 +209,7 @@
           "DOVE_SIAMO":"DOVE SIAMO",
           "NOVITÀ":"NOVITÀ",
           "DOCUMENTAZIONE":"DOCUMENTAZIONE",
+          "CONTATTI":"CONTATTI",
           "LINGUA":"Sprache",
           "H1":"",
           "h1":"",
@@ -231,7 +234,7 @@
           "h4":"",
         }
       };
-
+      
       function TED(){
         document.getElementById("HOME").innerText=traduzioni.TED.HOME;
         document.getElementById("CHI_SIAMO").innerText=traduzioni.TED.CHI_SIAMO;
