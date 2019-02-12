@@ -8,7 +8,6 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Favicons -->
   <link href="img/favicon.png" rel="icon">
@@ -34,8 +33,8 @@
 
 </head>
 
-<body id="body" onload="Lingua()">
-<script src="cookies.js"> </script>
+<body id="body" onload="ITA()">
+
   <!--==========================
     Top Bar
   ============================-->
@@ -94,7 +93,6 @@
           <li><a href="servizi.html" id="I_NOSTRI_SERVIZI"></a></li>
           <li><a href="dovesiamo.html" id="DOVE_SIAMO"></a></li>
           <li><a href="documentazione.html" id="DOCUMENTAZIONE"></a></li>
-          <li><a href="novita.html" id="NOVITÀ"></a></li>
           <li><a href="contatti.html" id="CONTATTI"></a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -115,12 +113,32 @@
     <div class="owl-carousel">
       <img src="logo_centrocasa2.png" class="img2">
     </div>
+    <hr>
 
 
   </section><!-- #intro -->
 
   <main id="main">
-
+    <br>
+    <br>
+    <div class="owl-carousel" >
+    
+    <section style="padding:30px">
+      <h4>I NOSTRI SERVIZI</p><br>
+      <ul>
+        <li>Stipula Del Contratto</li>
+        <li>Attestazione Di Rispondenza</li>
+        <li>La Ripartizione Delle Spese Condominiali</li>
+        <li>Disdetta O Risoluzione Del Contratto</li>
+        <li>In Caso Di Sfratto</li>
+        <li>Rilascio Dell’Alloggio</li>
+        <li>Assistenza</li>
+        <li>La Sezione IPES</li>
+      </ul>
+        <a href="servizi.html">Per Saperne Di Pi&ugrave;</a>
+    </section>
+    
+    </div>
 
 
   </main>
@@ -130,10 +148,10 @@
   ============================-->
 
   <br>
-  <footer id="footer" >
+  <footer id="footer">
 
-    <div class="container"  >
-      <div class="copyright"  >
+    <div class="container">
+      <div class="copyright">
         <script>
           var today = new Date();
           var year = today.getFullYear();
@@ -178,6 +196,7 @@
           "DOVE_SIAMO":"DOVE SIAMO",
           "NOVITÀ":"NOVITÀ",
           "DOCUMENTAZIONE":"DOCUMENTAZIONE",
+          "CONTATTI":"CONTATTI",
           "LINGUA":"Lingua",
         },
         "TED":{
@@ -188,6 +207,7 @@
           "DOVE_SIAMO":"DOVE SIAMO",
           "NOVITÀ":"NOVITÀ",
           "DOCUMENTAZIONE":"DOCUMENTAZIONE",
+          "CONTATTI":"CONTATTI",
           "LINGUA":"Sprache",
         },
         "ENG":{
@@ -198,6 +218,7 @@
             "DOVE_SIAMO":"WHERE YOU CAN FIND US",
             "NOVITÀ":"NEWS",
             "DOCUMENTAZIONE":"DOCUMENTATION",
+            "CONTATTI":"CONTACTS",
             "LINGUA":"Language",
         }
       };
@@ -208,8 +229,8 @@
       document.getElementById("STAFF").innerText=traduzioni.ITA.STAFF;
       document.getElementById("I_NOSTRI_SERVIZI").innerText=traduzioni.ITA.I_NOSTRI_SERVIZI;
       document.getElementById("DOVE_SIAMO").innerText=traduzioni.ITA.DOVE_SIAMO;
-      document.getElementById("NOVITÀ").innerText=traduzioni.ITA.NOVITÀ;
       document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.ITA.DOCUMENTAZIONE;
+      document.getElementById("CONTATTI").innerText=traduzioni.ITA.CONTATTI;
       document.getElementById("LINGUA").innerText=traduzioni.ITA.LINGUA;
       localStorage.setItem("LANG","ITA");
     }
@@ -219,8 +240,8 @@
       document.getElementById("STAFF").innerText=traduzioni.TED.STAFF;
       document.getElementById("I_NOSTRI_SERVIZI").innerText=traduzioni.TED.I_NOSTRI_SERVIZI;
       document.getElementById("DOVE_SIAMO").innerText=traduzioni.TED.DOVE_SIAMO;
-      document.getElementById("NOVITÀ").innerText=traduzioni.TED.NOVITÀ;
       document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.TED.DOCUMENTAZIONE;
+      document.getElementById("CONTATTI").innerText=traduzioni.TED.CONTATTI;
       document.getElementById("LINGUA").innerText=traduzioni.TED.LINGUA;
       localStorage.setItem("LANG","TED");
     }
@@ -230,8 +251,8 @@
       document.getElementById("STAFF").innerText=traduzioni.ENG.STAFF;
       document.getElementById("I_NOSTRI_SERVIZI").innerText=traduzioni.ENG.I_NOSTRI_SERVIZI;
       document.getElementById("DOVE_SIAMO").innerText=traduzioni.ENG.DOVE_SIAMO;
-      document.getElementById("NOVITÀ").innerText=traduzioni.ENG.NOVITÀ;
       document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.ENG.DOCUMENTAZIONE;
+      document.getElementById("CONTATTI").innerText=traduzioni.ENG.CONTATTI;
       document.getElementById("LINGUA").innerText=traduzioni.ENG.LINGUA;
       localStorage.setItem("LANG","ENG");
     }
