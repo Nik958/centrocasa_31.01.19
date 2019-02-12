@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- <script type = "text/javascript" src="novita.js"></script> -->
+<!-- <script type = "text/javascript" src="staff.js"></script> -->
 <link rel="stylesheet" type="text/css" href="prova.css">
   <meta charset="utf-8">
   <title>CENTROCASA</title>
@@ -30,7 +30,23 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
-
+	<style>
+		.staff{
+			 width:60%; 
+			 border-right: 2px solid grey; 
+			 padding:30px;
+			 float: left;
+		}
+		
+		
+		@media screen and (max-width: 800px) {
+      .staff{
+          width: 110%;
+          border: none;
+      }			
+    }
+	</style>
+ 
 </head>
 
 <body id="body" onload="Lingua()">
@@ -43,20 +59,18 @@
   <!--==========================
     Header
   ============================-->
-
-
-
+  
+  
+  
   <header id="header">
     <div class="container-fluid">
 
       <div id="logo" class="pull-left">
       <!-- Image and text -->
-      <div class="">
+      <nav class="">
           <ul class="nav-menu">
             <li>
-              <a href="home.html" style="
-                padding-right: 0px;
-                padding-left: 0px;
+              <a class="navbar-brand" href="home.html" style="            
                 padding-top: 0.3125rem;
                 padding-bottom: 0.3125rem;
                 font-family : inherit;
@@ -84,18 +98,18 @@
               </ul>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
-
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li><a href="home.html" id="HOME"></a></li>
           <li><a href="chisiamo.html" id="CHI_SIAMO"></a></li>
-          <li><a href="staff.html" id="STAFF"></a></li>
+          <li class="menu-active"><a href="staff.html" id="STAFF"></a></li>
           <li><a href="servizi.html" id="I_NOSTRI_SERVIZI"></a></li>
           <li><a href="dovesiamo.html" id="DOVE_SIAMO"></a></li>
-          <li class="menu-active"><a href="novita.html" id="NOVITÀ"></a></li>
+          <li><a href="novita.html" id="NOVITÀ"></a></li>
           <li><a href="documentazione.html" id="DOCUMENTAZIONE"></a></li>
+          <li><a href="contatti.html" id="CONTATTI"></a></li>         
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -107,19 +121,32 @@
 
 
   <main id="main">
-		<section style="padding:30px">
-			<h1 id="h1"></h1>
-			<b id="b1"></b>
-			<p id="p1"></p>
-			<p id="p2"></p>
-		</section>
+
+    <section style="padding:30px;height:1200px">
+			<h1 id="H1"></h1>
+			<div style="height:45%">
+				<br><img class="staff" src="./img/centrocasa/staff2.jpg">
+        <br><p style="float:left; padding: 10px">
+          <h id="h1"></h>
+          <br><h id="h2"></h>
+        </p>
+			</div>
+			<div style="height:55%">
+				<img class="staff" src="./img/centrocasa/staff1.jpg">
+        <p style="float:left; padding: 10px">
+          <h id="h3"></h>
+          <br><h id="h4"></h>
+        </p>
+			</div>
+	</section>
 
   </main>
+
 
   <!--==========================
     Footer
   ============================-->
-  <footer id="footer" style="padding: 10px">
+  <footer id="footer">
     <div class="container">
       <div class="copyright">
         <script>
@@ -158,52 +185,90 @@
 
 <script>
   var traduzioni={
-          "ITA":{
-            "HOME":"HOME",
-            "CHI_SIAMO":"CHI SIAMO",
-            "STAFF":"STAFF",
-            "I_NOSTRI_SERVIZI":"I NOSTRI SERVIZI",
-            "DOVE_SIAMO":"DOVE SIAMO",
-            "NOVITÀ":"NOVITÀ",
-            "DOCUMENTAZIONE":"DOCUMENTAZIONE",
-            "LINGUA":"Lingua",
-            "h1":"Novità",
-            "b1":'Dal 1 gennaio è entrato in vigore il nuovo accordo territoriale per il comune di Bolzano. Sono stati rivisti i parametri per la determinazione dei canoni e per alcune tipologie di alloggi, soprattutto se di minor pregio e nelle zone popolari, il Centro Casa stima una riduzione degli affitti. Tra le novità l’introduzione dell’attestazione di rispondenza del contratto di locazione agli accordi.',
-            "p1":"Le novità maggiormente rilevanti sono legate alla revisione e attualizzazione dell’elenco degli elementi ritenuti determinati per definire, all’interno di una scala di valore, il pregio degli alloggi e quindi la fascia di prezzo del canone d’affitto. A ciascuno di questi elementi è stato attribuito un valore espresso in punti, prevedendo contestualmente delle percentuali di riduzione del canone in presenza di alcuni elementi ritenuti digradanti. Ciò allo scopo di rendere l'importo dell'affitto adeguato alla reale situazione dell'alloggio. Un importante ulteriore risultato raggiunto è l’introduzione di una riduzione dei canoni massimi applicabili alle abzioni mai integralmente restaurate, che comporterà una riduzione degli affitti per le abzioni disagiate; abzioni che molto spesso vengono affittate a persone in situazione di indigenza o di disagio sociale.",
-            "p2":"Per ridurre i frequenti contenziosi relativi alle condizioni di consegna e riconsegna dell’alloggio locato, è stato predisposto un modello di verbale che sarà compilato e sottoscritto dalle parti firmatarie del contratto di locazione.\nGrande importanza riveste inoltre l’introduzione della certificazione di rispondenza dei contratti sul piano economico e normativo agli accordi territoriali. La certificazione, indispensabile per beneficiare delle agevolazioni fiscali, verrà rilasciata esclusivamente da una organizzazione firmataria degli accordi (in provincia di Bolzano il Centro Casa Mieterschutz e l’Associazione della proprietà edilizia) sulla base delle dichiarazioni rilasciate - con relativa assunzione di responsabilità - da una parte contrattuale. L’attribuzione di una simile funzione di verifica attribu alle parti sottoscrittrici degli accordi territoriali metterà in sicurezza l’inquilino da forzature interpretative degli accordi o furberie che a volte vengono messe in atto da alcuni proprietari.",
-          },
-          // ORA LE TRADUZIONI IN TEDESCO
-          "TED":{
-            "HOME":"HOME",
+        "ITA":{
+          "HOME":"HOME",
           "CHI_SIAMO":"CHI SIAMO",
           "STAFF":"STAFF",
           "I_NOSTRI_SERVIZI":"I NOSTRI SERVIZI",
           "DOVE_SIAMO":"DOVE SIAMO",
           "NOVITÀ":"NOVITÀ",
           "DOCUMENTAZIONE":"DOCUMENTAZIONE",
+          "CONTATTI":"CONTATTI",
+          "LINGUA":"Lingua",
+          "H1":"Il nostro staff",
+          "h1":"Da sinistra: Roberta Tagliavini, Markus Plaikner, ",
+          "h2":"Mar’yana Ivashchenko, Mario Usala, Daniele Giacomin",
+          "h3":"Da sinistra: Dodo Detassis, Donatella Califano, ",
+          "h4":"Renato Zanieri",
+        },
+        "TED":{
+          "HOME":"HOME",
+          "CHI_SIAMO":"CHI SIAMO",
+          "STAFF":"STAFF",
+          "I_NOSTRI_SERVIZI":"I NOSTRI SERVIZI",
+          "DOVE_SIAMO":"DOVE SIAMO",
+          "NOVITÀ":"NOVITÀ",
+          "DOCUMENTAZIONE":"DOCUMENTAZIONE",
+          "CONTATTI":"CONTATTI",
           "LINGUA":"Sprache",
-            "h1":"Nachrichten",
-            "b1":"Mit 1. Jänner ist das neue Gebietsabkommen für die Gemeinde Bozen in Kraft getreten.Die Parameter zur Bestimmung der Miete sind überarbeitet worden. Der Mietschutz geht davon aus, dass bei einigen Arten von Mietwohnungen, vor allem preiswertere in weniger prestigeträchtigen Zonen, die Mieten sinken werden. Zu den Neuheiten zählt die Einführung eines Dokuments, das die Übereinstimmung des Mietvertrags mit dem Gebietsabkommen.",
-            "p1":"Eine der wichtigsten Neuerungen betrifft die Überarbeitung und Aktualisierung der Auflistung jener Elemente, die über eine Punkteskala den Wert der Immobilie und somit den Schwankungsbereich des Mietpreises mitbestimmen. Zusätzlich gibt es weitere Elemente bzw. nachteilige Bedingungen, die – sofern vorhanden - die Mietpreise um einen festgesetzten Prozentsatz senken. Dies um den Mietzins an die tatsächliche Situation der Wohnung anzupassen. Ein weiteres positives Ergebnis ist, dass eine Reduzierung der Höchstgrenze der Mietpreise für Wohnungen eingeführt worden ist, die nie in vollem Ausmaß restauriert worden sind. Dies wird dazu führen, dass Wohnungen in weniger gutem Zustand, die vielfach an sozial schwache bzw. bedürftige Personen vermietet sind, günstiger werden.",
-            "p2":"Um die vielen Rechtsstreitigkeiten rund um den Über- bzw.\nRückgabezustand der Wohnung zu vermeiden ist ein entsprechender Protokollvordruck ausgearbeitet worden, der beim Abschluss des Mietvertrags vom Mieter und vom Vermieter ausgefüllt und unterschrieben wird. Ein weiterer wichtiger Punkt ist, dass die Übereinstimmung der wirtschaftlichen und vertraglichen Konditionen und Bestimmungen des Mietvertrags mit den Vorgaben der Gebietsabkommen bescheinigt wird. Diese Bescheinigung ist notwendig, um in den Genuss der Steuerbegünstigungen zu kommen und kann ausschließlich von einer unterzeichnenden Organisation ausgestellt werden (in Südtirol der Centro Casa Mieterschutz und der Verband der Hauseigentümer). Die Bescheinigung wird aufgrund der Erklärung der Vertragspartner abgefasst, sie übernehmen die Verantwortung für die Richtigkeit der Daten. Die Überprüfung der unterzeichnenden Organisationen hat eine Art Schutzfunktion für Mieter gegenüber einseitigen Interpretationen oder der Cleverness mancher Eigentümer."
-          },
-          "ENG":{
-            "HOME":"HOME",
-            "CHI_SIAMO":"WHO WE ARE",
-            "STAFF":"STAFF",
-            "I_NOSTRI_SERVIZI":"OUR SERVICES",
-            "DOVE_SIAMO":"WHERE YOU CAN FIND US",
-            "NOVITÀ":"NEWS",
-            "DOCUMENTAZIONE":"DOCUMENTATION",
-            "CONTATTI":"CONTACTS",
-            "LINGUA":"Language",
-            "h1":"News",
-            "b1":"The new territorial agreement for the municipality of Bolzano came into force on 1 January. The parameters for determining the rents and for some types of accommodation have been revised. Especially if of lesser value and in the popular areas, “Centro Casa” estimates a reduction in rent prices. One of the new features is the introduction of a certificate of corresponding of the rent contract to the agreements.",
-            "p1":"The most important changes are related to the revision and updating of the list of elements considered determined to define, within a scale of value, the quality of the housing and therefore the price range of the rent. Each of these elements has been assigned a value expressed in points, at the same time providing percentages of reduction of the rent in presence of some elements considered degrading. This is in order to make the rent price appropriate to the real situation of the housing. A further important result achieved is the introduction of a reduction in the maximum rents applicable to houses that have never been fully restored, which will lead to a reduction in rent prices for houses in need; houses that are very often rented out to people in need or social discomfort.",
-            "p2":"In order to reduce the frequent disputes regarding the conditions of delivery and giving back the rented accommodation, a form of report has been prepared which will be completed and signed by the involved participants to the rental agreement.\nThe introduction of certification of the economic and regulatory compliance of contracts with territorial agreements is also of great importance. The certification, which is essential in order to benefit from the tax benefits, will be issued exclusively by an organisation that signs the agreements (in the province of Bolzano, the “Centro Casa Mieterschutz” and the “Association of Building Owners”) on the basis of the declarations issued - with relative assumption of responsibility - in a contractual way. The attribution of a similar verification function attributed to the signatory of the territorial agreements will secure the tenant from forcing interpretation of the agreements or theft that are sometimes implemented by some owners."
-          }
+          "H1":"",
+          "h1":"",
+          "h2":"",
+          "h3":"",
+          "h4":"",
+        },
+        "ENG":{
+          "HOME":"HOME",
+          "CHI_SIAMO":"WHO WE ARE",
+          "STAFF":"STAFF",
+          "I_NOSTRI_SERVIZI":"OUR SERVICES",
+          "DOVE_SIAMO":"WHERE YOU CAN FIND US",
+          "NOVITÀ":"NEWS",
+          "DOCUMENTAZIONE":"DOCUMENTATION",
+          "CONTATTI":"CONTACTS",
+          "LINGUA":"Language",
+          "H1":"",
+          "h1":"",
+          "h2":"",
+          "h3":"",
+          "h4":"",
+        }
       };
-
+      
+      function TED(){
+        document.getElementById("HOME").innerText=traduzioni.TED.HOME;
+        document.getElementById("CHI_SIAMO").innerText=traduzioni.TED.CHI_SIAMO;
+        document.getElementById("STAFF").innerText=traduzioni.TED.STAFF;
+        document.getElementById("I_NOSTRI_SERVIZI").innerText=traduzioni.TED.I_NOSTRI_SERVIZI;
+        document.getElementById("DOVE_SIAMO").innerText=traduzioni.TED.DOVE_SIAMO;
+        document.getElementById("NOVITÀ").innerText=traduzioni.TED.NOVITÀ;
+        document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.TED.DOCUMENTAZIONE;
+        document.getElementById("CONTATTI").innerText=traduzioni.TED.CONTATTI;
+        document.getElementById("LINGUA").innerText=traduzioni.TED.LINGUA;
+        document.getElementById("H1").innerText=traduzioni.TED.H1;
+        document.getElementById("h1").innerText=traduzioni.TED.h1;
+        document.getElementById("h2").innerText=traduzioni.TED.h2;
+        document.getElementById("h3").innerText=traduzioni.TED.h3;
+        document.getElementById("h4").innerText=traduzioni.TED.h4;
+        localStorage.setItem("LANG","TED");
+    }
+    function ENG(){
+        document.getElementById("HOME").innerText=traduzioni.ENG.HOME;
+        document.getElementById("CHI_SIAMO").innerText=traduzioni.ENG.CHI_SIAMO;
+        document.getElementById("STAFF").innerText=traduzioni.ENG.STAFF;
+        document.getElementById("I_NOSTRI_SERVIZI").innerText=traduzioni.ENG.I_NOSTRI_SERVIZI;
+        document.getElementById("DOVE_SIAMO").innerText=traduzioni.ENG.DOVE_SIAMO;
+        document.getElementById("NOVITÀ").innerText=traduzioni.ENG.NOVITÀ;
+        document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.ENG.DOCUMENTAZIONE;
+        document.getElementById("CONTATTI").innerText=traduzioni.ENG.CONTATTI;
+        document.getElementById("LINGUA").innerText=traduzioni.ENG.LINGUA;
+        document.getElementById("H1").innerText=traduzioni.ENG.H1;
+        document.getElementById("h1").innerText=traduzioni.ENG.h1;
+        document.getElementById("h2").innerText=traduzioni.ENG.h2;
+        document.getElementById("h3").innerText=traduzioni.ENG.h3;
+        document.getElementById("h4").innerText=traduzioni.ENG.h4;
+        localStorage.setItem("LANG","ENG");
+    }
     function ITA(){
       document.getElementById("HOME").innerText=traduzioni.ITA.HOME;
       document.getElementById("CHI_SIAMO").innerText=traduzioni.ITA.CHI_SIAMO;
@@ -214,44 +279,14 @@
       document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.ITA.DOCUMENTAZIONE;
       document.getElementById("CONTATTI").innerText=traduzioni.ITA.CONTATTI;
       document.getElementById("LINGUA").innerText=traduzioni.ITA.LINGUA;
-      document.getElementById("h1").innerText=traduzioni.ITA.h1;
-      document.getElementById("b1").innerText=traduzioni.ITA.b1;
-      document.getElementById("p1").innerText=traduzioni.ITA.p1;
-      document.getElementById("p2").innerText=traduzioni.ITA.p2;
-      localStorage.setItem("LANG","ITA");
+        document.getElementById("H1").innerText=traduzioni.ITA.H1;
+        document.getElementById("h1").innerText=traduzioni.ITA.h1;
+        document.getElementById("h2").innerText=traduzioni.ITA.h2;
+        document.getElementById("h3").innerText=traduzioni.ITA.h3;
+        document.getElementById("h4").innerText=traduzioni.ITA.h4;
+        localStorage.setItem("LANG","ITA");
     }
-    function ENG(){
-      document.getElementById("HOME").innerText=traduzioni.ENG.HOME;
-      document.getElementById("CHI_SIAMO").innerText=traduzioni.ENG.CHI_SIAMO;
-      document.getElementById("STAFF").innerText=traduzioni.ENG.STAFF;
-      document.getElementById("I_NOSTRI_SERVIZI").innerText=traduzioni.ENG.I_NOSTRI_SERVIZI;
-      document.getElementById("DOVE_SIAMO").innerText=traduzioni.ENG.DOVE_SIAMO;
-      document.getElementById("NOVITÀ").innerText=traduzioni.ENG.NOVITÀ;
-      document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.ENG.DOCUMENTAZIONE;
-      document.getElementById("CONTATTI").innerText=traduzioni.ENG.CONTATTI;
-      document.getElementById("LINGUA").innerText=traduzioni.ENG.LINGUA;
-      document.getElementById("h1").innerText=traduzioni.ENG.h1;
-      document.getElementById("b1").innerText=traduzioni.ENG.b1;
-      document.getElementById("p1").innerText=traduzioni.ENG.p1;
-      document.getElementById("p2").innerText=traduzioni.ENG.p2;
-      localStorage.setItem("LANG","ENG");
-    }
-    function TED(){
-      document.getElementById("HOME").innerText=traduzioni.TED.HOME;
-      document.getElementById("CHI_SIAMO").innerText=traduzioni.TED.CHI_SIAMO;
-      document.getElementById("STAFF").innerText=traduzioni.TED.STAFF;
-      document.getElementById("I_NOSTRI_SERVIZI").innerText=traduzioni.TED.I_NOSTRI_SERVIZI;
-      document.getElementById("DOVE_SIAMO").innerText=traduzioni.TED.DOVE_SIAMO;
-      document.getElementById("NOVITÀ").innerText=traduzioni.TED.NOVITÀ;
-      document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.TED.DOCUMENTAZIONE;
-      document.getElementById("CONTATTI").innerText=traduzioni.TED.CONTATTI;
-      document.getElementById("LINGUA").innerText=traduzioni.TED.LINGUA;
-      document.getElementById("h1").innerText=traduzioni.TED.h1;
-      document.getElementById("b1").innerText=traduzioni.TED.b1;
-      document.getElementById("p1").innerText=traduzioni.TED.p1;
-      document.getElementById("p2").innerText=traduzioni.TED.p2;
-      localStorage.setItem("LANG","TED");
-    }
+
     function Lingua(){
       var lingua=localStorage.getItem("LANG");
       switch (lingua) {
