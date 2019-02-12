@@ -19,9 +19,11 @@
 
   float: left;
   margin-left: 20px;
-  width: 20%;
+  width:auto;
 
 }
+
+
 
 li{
   font-size: 15px
@@ -1050,7 +1052,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #footer .copyright {
   text-align: center;
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 #footer .credits {
