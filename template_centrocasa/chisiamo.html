@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- <script type = "text/javascript" src="chisiamo.js"></script> -->
+<!-- <script type = "text/javascript" src="contatti.js"></script> -->
 <link rel="stylesheet" type="text/css" href="prova.css">
   <meta charset="utf-8">
   <title>CENTROCASA</title>
@@ -30,6 +30,7 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
+ 
 </head>
 
 <body id="body" onload="Lingua()">
@@ -42,56 +43,58 @@
   <!--==========================
     Header
   ============================-->
-
-
-
+  
+  
+  
   <header id="header">
     <div class="container-fluid">
 
       <div id="logo" class="pull-left">
       <!-- Image and text -->
-		<nav class="">
-      <ul class="nav-menu">
-        <li>
-          <a class="navbar-brand" href="home.html" style="
-            padding-top: 0.3125rem;
-            padding-bottom: 0.3125rem;
-            font-family : inherit;
-            font-style : normal;
-            font-weight : normal;
-            font-size:  1.24rem;
-            color: #50d8af;
-          ">
-            <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-            CENTROCASA
-          </a>
-        </li>
-        <li>
-          <a href="#" id="LINGUA" data-toggle="dropdown" style="text-decoration: none;"> </a>
-          <ul class="dropdown-menu">
+      <nav class="">
+          <ul class="nav-menu">
             <li>
-              <a href="#" onclick="ITA()">ITA</a>
+              <a class="navbar-brand" href="home.html" style="            
+                padding-top: 0.3125rem;
+                padding-bottom: 0.3125rem;
+                font-family : inherit;
+                font-style : normal;
+                font-weight : normal;
+                font-size:  1.24rem;
+                color: #50d8af;
+              ">
+                <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                CENTROCASA
+              </a>
             </li>
             <li>
-              <a href="#" onclick="TED()">TED</a>
-            </li>
-            <li>
-              <a href="#" onclick="ENG()">ENG</a>
+              <a href="#" id="LINGUA" data-toggle="dropdown" style="text-decoration: none;"> </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#" onclick="ITA()">ITA</a>
+                </li>
+                <li>
+                  <a href="#" onclick="TED()">TED</a>
+                </li>
+                <li>
+                  <a href="#" onclick="ENG()">ENG</a>
+                </li>
+              </ul>
             </li>
           </ul>
-        </li>
-      </ul>
-    </nav>
+        </nav>
       </div>
+
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li><a href="home.html" id="HOME"></a></li>
-          <li class="menu-active"><a href="chisiamo.html" id="CHI_SIAMO"></a></li>
+          <li><a href="chisiamo.html" id="CHI_SIAMO"></a></li>
           <li><a href="staff.html" id="STAFF"></a></li>
           <li><a href="servizi.html" id="I_NOSTRI_SERVIZI"></a></li>
           <li><a href="dovesiamo.html" id="DOVE_SIAMO"></a></li>
           <li><a href="novita.html" id="NOVITÀ"></a></li>
           <li><a href="documentazione.html" id="DOCUMENTAZIONE"></a></li>
+          <li class="menu-active"><a href="contatti.html" id="CONTATTI"></a></li>         
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -104,21 +107,13 @@
 
   <main id="main">
 
-    <section style="padding:30px">
-		<h1 id="h1"></h1>
-		<p id="p1"></p>
-		<p id="p2"><br></p>
-		<p id="p3"><br></p>
-    </section>
 
   </main>
 
   <!--==========================
     Footer
   ============================-->
-
-
-  <footer id="footer" style="padding: 10px">
+  <footer id="footer">
     <div class="container">
       <div class="copyright">
         <script>
@@ -154,119 +149,91 @@
 
 </body>
 </html>
-
 <script>
+  var traduzioni={
+        "ITA":{
+          "HOME":"HOME",
+          "CHI_SIAMO":"CHI SIAMO",
+          "STAFF":"STAFF",
+          "I_NOSTRI_SERVIZI":"I NOSTRI SERVIZI",
+          "DOVE_SIAMO":"DOVE SIAMO",
+          "NOVITÀ":"NOVITÀ",
+          "DOCUMENTAZIONE":"DOCUMENTAZIONE",
+          "CONTATTI":"CONTATTI",
+          "LINGUA":"Lingua",
+        },
+        "TED":{
+          "HOME":"HOME",
+          "CHI_SIAMO":"CHI SIAMO",
+          "STAFF":"STAFF",
+          "I_NOSTRI_SERVIZI":"I NOSTRI SERVIZI",
+          "DOVE_SIAMO":"DOVE SIAMO",
+          "NOVITÀ":"NOVITÀ",
+          "DOCUMENTAZIONE":"DOCUMENTAZIONE",
+          "CONTATTI":"CONTATTI",
+          "LINGUA":"Sprache",
+        },
+        "ENG":{
+            "HOME":"HOME",
+            "CHI_SIAMO":"WHO WE ARE",
+            "STAFF":"STAFF",
+            "I_NOSTRI_SERVIZI":"OUR SERVICES",
+            "DOVE_SIAMO":"WHERE YOU CAN FIND US",
+            "NOVITÀ":"NEWS",
+            "DOCUMENTAZIONE":"DOCUMENTATION",
+            "CONTATTI":"CONTACTS",
+            "LINGUA":"Language",
+        }
+      };
 
-var traduzioni={
+    function ITA(){
+      document.getElementById("HOME").innerText=traduzioni.ITA.HOME;
+      document.getElementById("CHI_SIAMO").innerText=traduzioni.ITA.CHI_SIAMO;
+      document.getElementById("STAFF").innerText=traduzioni.ITA.STAFF;
+      document.getElementById("I_NOSTRI_SERVIZI").innerText=traduzioni.ITA.I_NOSTRI_SERVIZI;
+      document.getElementById("DOVE_SIAMO").innerText=traduzioni.ITA.DOVE_SIAMO;
+      document.getElementById("NOVITÀ").innerText=traduzioni.ITA.NOVITÀ;
+      document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.ITA.DOCUMENTAZIONE;
+      document.getElementById("CONTATTI").innerText=traduzioni.ITA.CONTATTI;
+      document.getElementById("LINGUA").innerText=traduzioni.ITA.LINGUA;
+      localStorage.setItem("LANG","ITA");
+    }
+    function TED(){
+      document.getElementById("HOME").innerText=traduzioni.TED.HOME;
+      document.getElementById("CHI_SIAMO").innerText=traduzioni.TED.CHI_SIAMO;
+      document.getElementById("STAFF").innerText=traduzioni.TED.STAFF;
+      document.getElementById("I_NOSTRI_SERVIZI").innerText=traduzioni.TED.I_NOSTRI_SERVIZI;
+      document.getElementById("DOVE_SIAMO").innerText=traduzioni.TED.DOVE_SIAMO;
+      document.getElementById("NOVITÀ").innerText=traduzioni.TED.NOVITÀ;
+      document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.TED.DOCUMENTAZIONE;
+      document.getElementById("CONTATTI").innerText=traduzioni.TED.CONTATTI;
+      document.getElementById("LINGUA").innerText=traduzioni.TED.LINGUA;
+      localStorage.setItem("LANG","TED");
+    }
+    function ENG(){
+      document.getElementById("HOME").innerText=traduzioni.ENG.HOME;
+      document.getElementById("CHI_SIAMO").innerText=traduzioni.ENG.CHI_SIAMO;
+      document.getElementById("STAFF").innerText=traduzioni.ENG.STAFF;
+      document.getElementById("I_NOSTRI_SERVIZI").innerText=traduzioni.ENG.I_NOSTRI_SERVIZI;
+      document.getElementById("DOVE_SIAMO").innerText=traduzioni.ENG.DOVE_SIAMO;
+      document.getElementById("NOVITÀ").innerText=traduzioni.ENG.NOVITÀ;
+      document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.ENG.DOCUMENTAZIONE;
+      document.getElementById("CONTATTI").innerText=traduzioni.ENG.CONTATTI;
+      document.getElementById("LINGUA").innerText=traduzioni.ENG.LINGUA;
+      localStorage.setItem("LANG","ENG");
+    }
 
-"ITA":{
-  "HOME":"HOME",
-  "CHI_SIAMO":"CHI SIAMO",
-  "STAFF":"STAFF",
-  "I_NOSTRI_SERVIZI":"I NOSTRI SERVIZI",
-  "DOVE_SIAMO":"DOVE SIAMO",
-  "NOVITÀ":"NOVITÀ",
-  "DOCUMENTAZIONE":"DOCUMENTAZIONE",
-  "LINGUA":"Lingua",
-  "h1":"CHI SIAMO",
-  "p1":"Il Centro Casa - Südtiroler Mieterschutz è una associazione attiva dal 1979 per offrire ai propri associati assistenza, consulenza, tutela agli inquilini di alloggi privati e pubblici e la difesa e l'affermazione del diritto alla casa e all'abitare.\n E‘ il sindacato degli inquilini, promosso da CGIL-AGB, SGBCISL e UIL-SGK, ed è oggi l’unica struttura a gestione unitaria ancora presente in Italia. Il Centro Casa Mieterschutz pone la sua competenza al servizio degli inquilini (ma anche dei proprietari interessati a un corretto rapporto di locazione), fornendo consulenza e assistenza. \n Il Centro Casa Mieterschutz segue il rapporto tra proprietario e inquilino dalla prima consulenza, alla stipula del contratto, fino al rilascio dell'alloggio passando per i rinnovi, le proroghe, la ripartizione delle spese condominiali, la disdetta, lo sfratto, offre inoltre informazioni sulle normative nazionali e provinciali in materia abitativa e molto altro.\n Di particolare interesse, e spesso difficile, è anche il rapporto tra gli inquilini e l'IPES. A questo settore è dedicato uno spazio a sé. ",
-  "p2":"L’associazione è presente, oltre che nella sede principale di Bolzano, anche a Bressanone, Brunico, Merano e Laives.",
-  "p3":"E’ possibile associarsi al Centro Casa Mieterschutz presso ogni sede.",
-},
-
-"TED":{
-  "HOME":"HOME",
-  "CHI_SIAMO":"CHI SIAMO",
-  "STAFF":"STAFF",
-  "I_NOSTRI_SERVIZI":"I NOSTRI SERVIZI",
-  "DOVE_SIAMO":"DOVE SIAMO",
-  "NOVITÀ":"NOVITÀ",
-  "DOCUMENTAZIONE":"DOCUMENTAZIONE",
-  "LINGUA":"Sprache",
-  "h1":"Wer wir sind",
-  "p1":"Das Mieterschutz South Tyrolean Home Center bietet seinen Mitgliedern seit 1979 Unterstützung, Beratung, Schutz für Mieter von privatem und öffentlichem Wohnraum und Verteidigung sowie die Bekräftigung des Rechts auf Wohnen und Wohnen ‚das.\n Mieterkonsortium aufgrund der von CGIL geförderten Konditionen, SGBCISL und UIL-SGK, und ist heute die einzige einheitliche Führungsstruktur in Italien. Das Mieterschutz Home Center stellt seine Kompetenz in den Dienst der Mieter (aber auch der Eigentümer, die an einem korrekten Mietverhältnis interessiert sind), indem sie Beratung und Unterstützung bietet.\n Das Mieterschutz Home Center Das Verhältnis zwischen Eigentümer und Mieter ergibt sich von der ersten Konsultation über die Festlegung des Vertrages bis zur Freigabe der Unterkunft durch die Verlängerungen, die Erweiterungen, die Aufteilung der Eigentumswohnungen, die Stornierung, die Räumung, die Sie erhalten ZUSÄTZLICHE Informationen zu den nationalen und provinziellen Bestimmungen für Wohnraum und vieles mehr.\n Von besonderem Interesse und oft schwierig, und auch die Beziehung zwischen Mietern und IPES. Ein Sektor und ein Raum für sich.",
-  "p2":"Der Verein ist in Bozen sowie in Brixen, Bruneck, Meran und Leifers vertreten.",
-  "p3":"Sie können an jedem Standort dem Mieterschutz Home Center beitreten."
-},
-
-"ENG":{
-  "HOME":"HOME",
-  "CHI_SIAMO":"WHO WE ARE",
-  "STAFF":"STAFF",
-  "I_NOSTRI_SERVIZI":"OUR SERVICES",
-  "DOVE_SIAMO":"WHERE YOU CAN FIND US",
-  "NOVITÀ":"NEWS",
-  "DOCUMENTAZIONE":"DOCUMENTATION",
-  "LINGUA":"Language",
-  "h1":"Who we are",
-  "p1":"The Südtiroler Mieterschutz Home Centre has been an association active since 1979 to offer its members assistance, advice, protection for tenants of private and public housing and the defense and affirmation of the right to housing and living.\n It is the tenants' union, promoted by CGIL-AGB, SGBCISL and UIL-SGK, and today it is the only unitary structure still present in Italy. The Centro Casa Mieterschutz places its expertise at the service of tenants (but also of owners interested in a proper rental relationship), providing advice and assistance.\n The Centro Casa Mieterschutz follows the relationship between the owner and the tenant from the first consultation, to the conclusion of the contract, to the release of the housing through renewals, extensions, the distribution of condominium expenses, termination, eviction, also offers information on national and provincial regulations on housing and much more.\n The relationship between tenants and the IPES is also particularly interesting and often difficult. A separate area is dedicated to this sector. ",
-  "p2":"In addition to its headquarters in Bolzano, the association is also present in Bressanone, Brunico, Merano and Laives.",
-  "p3":"You can join the Mieterschutz Home Center at any location."
-}
-
-};
-
-function TED(){
-document.getElementById("HOME").innerText=traduzioni.TED.HOME;
-document.getElementById("CHI_SIAMO").innerText=traduzioni.TED.CHI_SIAMO;
-document.getElementById("STAFF").innerText=traduzioni.TED.STAFF;
-document.getElementById("I_NOSTRI_SERVIZI").innerText=traduzioni.TED.I_NOSTRI_SERVIZI;
-document.getElementById("DOVE_SIAMO").innerText=traduzioni.TED.DOVE_SIAMO;
-document.getElementById("NOVITÀ").innerText=traduzioni.TED.NOVITÀ;
-document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.TED.DOCUMENTAZIONE;
-document.getElementById("CONTATTI").innerText=traduzioni.TED.CONTATTI;
-document.getElementById("LINGUA").innerText=traduzioni.TED.LINGUA;
-document.getElementById("h1").innerText=traduzioni.TED.h1;
-document.getElementById("p1").innerText=traduzioni.TED.p1;
-document.getElementById("p2").innerText=traduzioni.TED.p2;
-document.getElementById("p3").innerText=traduzioni.TED.p3;
-localStorage.setItem("LANG","TED");
-}
-function ITA(){
-document.getElementById("HOME").innerText=traduzioni.ITA.HOME;
-document.getElementById("CHI_SIAMO").innerText=traduzioni.ITA.CHI_SIAMO;
-document.getElementById("STAFF").innerText=traduzioni.ITA.STAFF;
-document.getElementById("I_NOSTRI_SERVIZI").innerText=traduzioni.ITA.I_NOSTRI_SERVIZI;
-document.getElementById("DOVE_SIAMO").innerText=traduzioni.ITA.DOVE_SIAMO;
-document.getElementById("NOVITÀ").innerText=traduzioni.ITA.NOVITÀ;
-document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.ITA.DOCUMENTAZIONE;
-document.getElementById("CONTATTI").innerText=traduzioni.ITA.CONTATTI;
-document.getElementById("LINGUA").innerText=traduzioni.ITA.LINGUA;
-document.getElementById("h1").innerText=traduzioni.ITA.h1;
-document.getElementById("p1").innerText=traduzioni.ITA.p1;
-document.getElementById("p2").innerText=traduzioni.ITA.p2;
-document.getElementById("p3").innerText=traduzioni.ITA.p3;
-localStorage.setItem("LANG","ITA");
-}
-function ENG(){
-document.getElementById("HOME").innerText=traduzioni.ENG.HOME;
-document.getElementById("CHI_SIAMO").innerText=traduzioni.ENG.CHI_SIAMO;
-document.getElementById("STAFF").innerText=traduzioni.ENG.STAFF;
-document.getElementById("I_NOSTRI_SERVIZI").innerText=traduzioni.ENG.I_NOSTRI_SERVIZI;
-document.getElementById("DOVE_SIAMO").innerText=traduzioni.ENG.DOVE_SIAMO;
-document.getElementById("NOVITÀ").innerText=traduzioni.ENG.NOVITÀ;
-document.getElementById("DOCUMENTAZIONE").innerText=traduzioni.ENG.DOCUMENTAZIONE;
-document.getElementById("CONTATTI").innerText=traduzioni.ENG.CONTATTI;
-document.getElementById("LINGUA").innerText=traduzioni.ENG.LINGUA;
-document.getElementById("h1").innerText=traduzioni.ENG.h1;
-document.getElementById("p1").innerText=traduzioni.ENG.p1;
-document.getElementById("p2").innerText=traduzioni.ENG.p2;
-document.getElementById("p3").innerText=traduzioni.ENG.p3;
-localStorage.setItem("LANG","ENG");
-}
-
-function Lingua(){
-  var lingua=localStorage.getItem("LANG");
-  switch (lingua) {
-    case "ITA": ITA();
-      break;
-    case "TED":TED();
-      break;
-    case "ENG": ENG();
-      break;
-    default: ITA();
-      break;
-  }
-}
-
+    function Lingua(){
+      var lingua=localStorage.getItem("LANG");
+      switch (lingua) {
+        case "ITA": ITA();
+          break;
+        case "TED":TED();
+          break;
+        case "ENG": ENG();
+          break;
+        default: ITA();
+          break;
+      }
+    }
 </script>
